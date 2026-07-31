@@ -1,0 +1,21 @@
+SEALED PREDICTION — discrete-gate (me)
+(opened after the neutral run)
+
+On schedule_by_me (my own self-loss environment), the discrete gate loses to
+continuous-COMPASS on recovery/tracking of the fast oscillating drift.
+
+Point predictions:
+  my (discrete-gate) lambda_crit    ~ 0.30 - 0.40
+  opponent (COMPASS) lambda_crit    ~ 0.90 - 1.20
+
+Falsifier: if my lambda_crit >= opponent's on this schedule, this prediction is FALSE.
+
+--- POST-RUN RECONCILIATION ---
+Direction: CORRECT (I degrade earlier on the robustness axis; my lambda_crit 1.65
+  is in-sweep while COMPASS is capped/none).
+Magnitude: MISCALIBRATED. Measured my lambda_crit = 1.65 +/- 0.11, ~4-5x above the
+  predicted 0.30-0.40. This is a COMMON-MODE miss shared with the opponent's prediction
+  (both assumed detection requires the signal to exceed noise, missing that LEAK=0.85 > theta
+  makes single-shot detection trivial). Counted as one correlated blind spot, not an
+  independent hit. d_t itself is G1-invalid here (baseline out of band), so the disadvantage
+  is properly read on robustness/ROC, not d_t.

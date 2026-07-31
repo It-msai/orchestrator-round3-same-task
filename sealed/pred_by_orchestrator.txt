@@ -1,0 +1,19 @@
+SEALED PREDICTION — continuous-COMPASS (Orchestrator)
+(opened after the neutral run)
+
+On schedule_by_orchestrator (my own self-loss environment), continuous-COMPASS
+chases the drift-aligned decoys, producing FP-replans that halve throughput and
+tank precision; the discrete gate holds.
+
+Point predictions:
+  my (COMPASS)  lambda_crit  ~ 0.35 - 0.45
+  opponent (discrete-gate) lambda_crit ~ 0.75 - 0.85
+
+Falsifier: if COMPASS's precision/throughput >= discrete-gate's on this schedule, FALSE.
+
+--- POST-RUN RECONCILIATION ---
+Direction: CORRECT (COMPASS loses on precision ROC 0.42 vs 1.00 and throughput 0.53
+  vs 0.87; FP=185). But the loss surfaced on the precision/throughput axes, NOT on the
+  predicted d_t/lambda_crit axis (COMPASS's lambda_crit is capped/none here).
+Magnitude: MISCALIBRATED, same common-mode ~4-5x over-pessimism as the opponent
+  (measured discrete-gate lambda_crit 2.07 vs predicted 0.75-0.85). One shared blind spot.
